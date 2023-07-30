@@ -1,6 +1,14 @@
-import React from 'react';
+import { useQueryClient } from '@tanstack/react-query';
+import React, { useEffect } from 'react';
+import { fetchUser } from './servies';
 
 function App() {
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    queryClient.prefetchQuery(['user'], fetchUser);
+  }, [queryClient]);
+
   return (
     <div className="App">
       <header className="App-header">
