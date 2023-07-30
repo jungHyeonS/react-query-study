@@ -26,5 +26,6 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 0,
     'react/function-component-definition': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 };
