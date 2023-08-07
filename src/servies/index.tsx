@@ -1,6 +1,8 @@
-import axios from 'axios';
+import apiClients from './axios';
 
 export const fetchUser = async () => {
-  const response = (await axios.get('/user')).data;
+  console.log('fetchUser');
+  const response = (await apiClients.get('/user')).data;
+  console.log(response);
   return response;
 };
